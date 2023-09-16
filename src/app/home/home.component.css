@@ -1,0 +1,121 @@
+*{
+  font-family: 'JetBrains Mono', monospace;
+}
+section{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+.container_image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(10px 10px 4px var(--main-color));
+}
+.container_info{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_image_mobile{
+  display: none;
+}
+h1{
+  margin-bottom: 5px;
+  font-size: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  animation: parpadeo 2s infinite alternate 5.5s;
+}
+
+.container_button{
+  margin-bottom: 20px;
+  height: 30px;
+
+}
+span{
+  margin-bottom: 10px;
+  color: var(--main-color);
+  font-size: 20px;
+  height: 30px;
+}
+@keyframes parpadeo {
+  0% {
+    background-color: black; /* Estado inicial (negro) */
+  }
+  100% {
+    background-color: var(--main-color); /* Estado final (cambiar a otro color, por ejemplo, rojo) */
+  }
+}
+@media screen and (max-width: 600px) {
+  .container_info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .container_image{
+    display: none;
+  }
+  h1{
+    font-size: 20px;
+    height: 40px;
+    margin-bottom: 5px;
+    filter: drop-shadow(10px 10px 4px var(--main-color));
+  }
+  span{
+    font-size: 14px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+  button {
+    margin: 5px;
+    font-size: 16px;
+    width: 100px;
+
+  }
+  .container_image_mobile{
+    display:flex;
+    justify-content: center;
+    width: 30%;
+    height: 30%;
+
+  }
+}
+.container_title{
+height: 100px;
+}
+@media screen and (min-width: 740px) and (max-width: 920px) {
+  h1{
+    font-size: 38px;
+    height: 40px;
+    margin-bottom: 50px;
+  }
+  span{
+    height: 30px;
+    margin-top: 30px;
+  }
+  button{
+    margin-top: 50px;
+  }
+  .container_title{
+    height: 100px;
+    }
+}
